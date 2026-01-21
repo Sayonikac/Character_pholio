@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doraemon</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel='stylesheet'>
+    <link href="https://db.onlinewebfonts.com/c/7f0b373d0dcf9e66c58f307ccf8089b1?family=Doraemon+slalala" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+    <header>
+        <a href="#" class="hero" data-aos="zoom-in" data-aos-duration="1600">Pocket</a>
+        <ul class="bar">
+            <li><a href="#" onclick="showHome()">Home</a></li>
+            <li><a href="#" onclick="showabout()">About</a></li>
+            <li><a href="#">Gadgets</a></li>
+            <li><a href="#">Secrets</a></li>
+            <li><a href="#" onclick="showFriends()">Friends</a></li>
+        </ul>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_9D5q883i07tiW0wF9Gai4mcBCb8S-GTSNQ&s" class="nav-toggle" onclick="hamburger()" style="width: 30px; cursor: pointer;">
+        <div class="dropdown">
+            <a href="#" onclick="showHome(); cancel()">Home</a>
+            <a href="#" onclick="showabout(); cancel()">About</a>
+            <a href="#">Gadgets</a>
+            <a href="#">Secrets</a>
+            <a href="#" onclick="showFriends(); cancel()">Friends</a>
+            <i class='bx bx-x' onclick="cancel()"></i>
+        </div>
+    </header>
+            
+    <section class="info" id="home-section">
+        <div class="info-text">
+            <h3 data-aos="slide-right" data-aos-duration="1600" data-aos-easing="ease-out" data-aos-delay="4500">22nd Century</h3>
+            <h1 data-aos="fade-in" data-aos-duration="1600" data-aos-easing="ease-out">Doraemon</h1>
+            <p data-aos="fade-in" data-aos-duration="1600" data-aos-easing="ease-in"data-aos-delay="500">Doraemon is not just a cartoon; he is a friend who lives in every childhood.”
+            With his soft smile, he says,
+            "Do not worry, Nobita… I am always here."
+            And those words still reach every child watching —
+            reminding us that it is okay to fail when someone believes in you.
+            From his magical pocket come gadgets,
+            but from his heart comes comfort, laughter, and hope.
+            Doraemon does not just solve problems —
+            he makes childhood feel safe, even today.
+            And whenever life feels heavy,
+            we still hear that familiar voice say,
+            "It will be alright".
+            </p>
+            <a href="https://doraemon.fandom.com/wiki/Doraemon" target="_blank" class="watch"><i class='bx bx-play'></i>Click Me</a>
+            <a href="https://www.youtube.com/watch?v=oAMsaTCrK5c" target="_blank" class="watch"><i class='bx bx-play'></i>Doraemon Time!</a>
+        </div>
+         <div class="image"data-aos="zoom-out-right" data-aos-duration="1900">
+            <img src="https://i.pinimg.com/originals/7a/2d/f3/7a2df393005784ae82886a596a93b07c.gif" alt="Doraemon Animation" class="zoom-animation">
+        </div>
+    </section>
+    <section class="friends-container" id="friends-section" style="display: none;">
+        <h1 class="friends-title" data-aos="fade-down">Doraemon's Friends</h1>
+        <div class="friends-grid">
+            <div class="friend-card" data-aos="zoom-in" data-aos-delay="100">
+                <img src="https://m.media-amazon.com/images/I/61WuOakG74L._AC_UF350,350_QL50_.jpg" alt="Nobita">
+               <p>Full Name: Nobita Nobi<br></br>
+                  Age: 10 years old<br></br>
+                  School: He studies at a local elementary school in Tokyo, Japan<br></br>
+                  Class: 4th grade (later shown in 5th grade in some episodes)<br></br>
+                  Personality: Kind-hearted, honest, emotional, lazy in studies, and often unlucky.<br></br>
+                  Strengths: Very kind, loyal to friends, good at shooting games, strong sense of justice.<br></br>
+                  Weaknesses: Poor in academics, afraid of exams, physically weak, and easily scared.<br></br>
+                  About Nobita:
+                    Nobita Nobi is a simple and relatable child who represents an ordinary student. 
+                    Though he struggles in school and often gets into trouble,
+                    his good heart and caring nature make him special.
+                    He shows that kindness and friendship matter more than being perfect.</p>
+
+            </div>
+            <div class="friend-card" data-aos="zoom-in" data-aos-delay="300">
+                <img src="https://i.pinimg.com/originals/6b/83/a4/6b83a487d609068e45a3265fb41d27c7.jpg" alt="Shizuka">
+                <p>Full Name: Shizuka Minamoto<br></br>
+                   Age: 10 years old<br></br>
+                   School: She studies at the same local elementary school in Tokyo, Japan.<br></br>
+                   Class: 4th grade (later shown in 5th grade in some episodes)<br></br>
+                   Personality: Kind, gentle, polite, intelligent, and caring.<br></br>
+                   Strengths: Good in studies, emotionally mature, supportive friend, strong moral values.<br></br>
+                   Weaknesses: Sometimes too trusting and easily worried about others.<br></br>
+                   About Shizuka:
+                    Shizuka Minamoto is a sweet and responsible girl who represents kindness and balance. 
+                    She often guides Nobita in the right direction and supports her friends with patience and understanding.
+                    Her calm nature and good heart make her one of the most loved characters in Doraemon.</p>
+            </div>
+            <div class="friend-card" data-aos="zoom-in" data-aos-delay="500">
+                <img src="https://i1.sndcdn.com/artworks-000356876622-3bxhcx-t1080x1080.jpg" alt="Gian">
+               <p>
+				Full Name: Takeshi Gouda (also known as Gian)<br></br>
+                Age: 10 years old<br></br>
+                School: He studies at the same local elementary school in Tokyo, Japan.<br></br>
+                Class: 4th grade (later shown in 5th grade in some episodes)<br></br>
+                Personality: Aggressive, loud, bossy, but emotional and protective of friends.<br></br>
+                Strengths: Physically strong, confident, leadership qualities, loyal to close friends.<br></br>
+                Weaknesses: Short-tempered, poor singer (though he thinks otherwise), misuses strength.<br></br>
+                About Gian:
+                Gian is the strong and dominating member of the group who often bullies others, especially Nobita.
+                However, deep inside, he has a caring heart and stands up for his friends in difficult times.
+                His character shows that even tough people can have kindness and emotions hidden beneath their rough behavior.
+			   </p>
+            </div>
+            <div class="friend-card" data-aos="zoom-in" data-aos-delay="700">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ110fKT6_4yzCV6jBpFmknQohx4Q9QWEou_g&s" alt="Suneo">
+               <p>
+               Full Name: Suneo Honekawa<br></br>
+                Age: 10 years old<br></br>
+                School: He studies at the same local elementary school in Tokyo, Japan.<br></br>
+                Class: 4th grade (later shown in 5th grade in some episodes)<br></br>
+                Personality: Clever, talkative, boastful, cunning, and sometimes jealous.<br></br>
+                Strengths: Intelligent, good communication skills, creative ideas, socially smart<br></br>
+                Weaknesses: Cowardly when alone, overconfident, dependent on Gian for protection<br></br>
+                About Suneo:
+                Suneo Honekawa is known for showing off his wealth and gadgets, often making others jealous. Though he sometimes bullies Nobita, he is intelligent and resourceful.
+                His character represents how pride and insecurity can exist together, making him a realistic and relatable character.
+			   </p>
+            </div>
+        </div>
+    </section>
+
+    <div class="icons" data-aos="fade-down" data-aos-duration="1600" data-aos-delay="500">
+        <a href="#"><i class='bx bxl-instagram'></i></a>
+        <a href="#"><i class='bx bxl-github' ></i></a>
+        <a href="#"><i class='bx bxl-linkedin' ></i></a>
+    </div>
+     
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({offset:0});
+
+        function hamburger(){
+            const navbar=document.querySelector(".dropdown")
+            navbar.style.transform='translateY(0px)'
+        }
+        function cancel(){
+            const navbar=document.querySelector(".dropdown")
+            navbar.style.transform='translateY(-400px)'
+        }
+
+        // CORRECTED Logic to switch between sections
+        function showFriends() {
+            const home = document.getElementById('home-section');
+            const friends = document.getElementById('friends-section');
+            
+            home.style.display = 'none';
+            // Use flex to maintain the grid layout structure
+            friends.style.display = 'flex'; 
+            
+            AOS.refresh(); 
+        }
+
+        function showHome() {
+            const home = document.getElementById('home-section');
+            const friends = document.getElementById('friends-section');
+            
+            friends.style.display = 'none';
+            // Important: Set this to 'flex' so the image and text stay side-by-side
+            home.style.display = 'flex'; 
+            
+            AOS.refresh();
+        }
+    </script>
+</body>
+</html>
