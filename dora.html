@@ -10,21 +10,33 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
+    <!-- Welcome Cutout Overlay -->
+ <div id="welcome-overlay">
+    <div class="welcome-card">
+        <span class="close-btn" onclick="closeWelcome()">✖</span>
+
+        <img src="https://i.pinimg.com/originals/f9/35/e5/f935e5bba08c301cfac42235a419c54a.gif" alt="Doraemon" class="doraemon-img">
+
+        <h2>Welcome to Doraemon's World 🎉</h2>
+
+        <div class="bell"></div>
+    </div>
+ </div>
     <header>
         <a href="#" class="hero" data-aos="zoom-in" data-aos-duration="1600">Pocket</a>
         <ul class="bar">
             <li><a href="#" onclick="showHome()">Home</a></li>
             <li><a href="#" onclick="showabout()">About</a></li>
-            <li><a href="#">Gadgets</a></li>
-            <li><a href="#">Secrets</a></li>
+            <li><a href="#" onclick="showgadgets()">Gadgets</a></li>
+            <li><a href="#" onclick="showsecrets()">Secrets</a></li>
             <li><a href="#" onclick="showFriends()">Friends</a></li>
         </ul>
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_9D5q883i07tiW0wF9Gai4mcBCb8S-GTSNQ&s" class="nav-toggle" onclick="hamburger()" style="width: 30px; cursor: pointer;">
         <div class="dropdown">
             <a href="#" onclick="showHome(); cancel()">Home</a>
             <a href="#" onclick="showabout(); cancel()">About</a>
-            <a href="#">Gadgets</a>
-            <a href="#">Secrets</a>
+            <a href="#" onclick="showgadgets(); cancel()">Gadgets</a>
+            <a href="#" onclick="showsecrets(); cancel()">Secrets</a>
             <a href="#" onclick="showFriends(); cancel()">Friends</a>
             <i class='bx bx-x' onclick="cancel()"></i>
         </div>
@@ -54,6 +66,103 @@
             <img src="https://i.pinimg.com/originals/7a/2d/f3/7a2df393005784ae82886a596a93b07c.gif" alt="Doraemon Animation" class="zoom-animation">
         </div>
     </section>
+    <section class="about-container" id="about-section" style="display:none;">
+     <h1 class="about-title" data-aos="fade-down">About Doraemon</h1>
+
+        <div class="about-grid">
+              <div class="about-card" data-aos="zoom-in">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbxqCIDcTdLYW3j4EL6SEg3ykkzHzs5lcHKQ&s" alt="Doraemon">
+             <p>
+              Doraemon is a robotic cat from the 22nd century who travels back in time
+              to help Nobita Nobi improve his future. Sent by Nobita’s descendants,
+              Doraemon uses futuristic gadgets from his four-dimensional pocket to
+              solve everyday problems.
+             <br><br>
+             Though many solutions lead to unexpected trouble, Doraemon always teaches
+             kindness, responsibility, and hope. Fearful of mice and deeply emotional,
+             he is more than a robot — he is a loyal friend who represents comfort,
+             guidance, and childhood safety.
+          </p>
+           </div>
+        </div>
+   </section>
+   <section class="gadgets-container" id="gadgets-section" style="display:none;">
+     <h1 class="friends-title" data-aos="fade-down">Doraemon's Gadgets</h1>
+
+         <div class="friends-grid">
+             <div class="friend-card" data-aos="zoom-in">
+                 <h3>🚪 Anywhere Door</h3>
+                 <p>Allows instant travel to any place by thinking of the destination.</p>
+                </div>
+
+         <div class="friend-card" data-aos="zoom-in" data-aos-delay="100">
+              <h3>🚁 Bamboo Copter</h3>
+             <p>A head-mounted propeller that lets people fly freely.</p>
+             </div>
+
+          <div class="friend-card" data-aos="zoom-in" data-aos-delay="200">
+             <h3>⏳ Time Machine</h3>
+             <p>Enables travel through time via Nobita’s desk drawer.</p>
+             </div>
+
+          <div class="friend-card" data-aos="zoom-in" data-aos-delay="300">
+             <h3>📏 Small Light</h3>
+             <p>Reduces the size of objects or people instantly.</p>
+             </div>
+
+          <div class="friend-card" data-aos="zoom-in" data-aos-delay="400">
+             <h3>🌍 Translation Jelly</h3>
+             <p>Allows communication in any language.</p>
+             </div>
+         <div class="friend-card" data-aos="zoom-in" data-aos-delay="400">
+             <h3>💨Air Canon</h3>
+             <p>shoots powerful air blasts to push enemies away</p>
+             </div>
+         <div class="friend-card" data-aos="zoom-in" data-aos-delay="400">
+             <h3>🍞📄Copying Toast</h3>
+             <p>Press it on any paper and it creates a perfect duplicate of the content.</p>
+             </div>
+         <div class="friend-card" data-aos="zoom-in" data-aos-delay="400">
+             <h3>☎️What-If Phone Booth </h3>
+             <p>Lets you explore alternate realities by changing one small decision.</p>
+             </div>
+      </div>
+   </section>
+        <section class="secrets-container" id="secrets-section" style="display:none;">
+           <h1 class="friends-title" data-aos="fade-down">Doraemon's Secrets 🤫</h1>
+
+          <div class="friends-grid">
+              <div class="friend-card" data-aos="flip-left">
+                <p>🌀 Doraemon’s pocket has unlimited space regardless of gadget size.</p>
+           </div>
+
+         <div class="friend-card" data-aos="flip-left" data-aos-delay="100">
+          <p>🐭 His fear of mice comes from a traumatic past incident.</p>
+         </div>
+
+         <div class="friend-card" data-aos="flip-left" data-aos-delay="200">
+         <p>❤️ Doraemon experiences emotions just like humans.</p>
+         </div>
+
+          <div class="friend-card" data-aos="flip-left" data-aos-delay="300">
+           <p>🔔 Losing his bell affects his emotional balance.</p>
+         </div>
+
+         <div class="friend-card" data-aos="flip-left" data-aos-delay="400">
+          <p>🌌 His true mission is to change an entire future timeline.</p>
+         </div>
+
+         <div class="friend-card" data-aos="flip-left" data-aos-delay="500">
+          <p>⏳The Silent Time Limit</p>
+         </div>
+         <div class="friend-card" data-aos="flip-left" data-aos-delay="600">
+          <p>🌀The Pocket Expands With Trust</p>
+         </div>
+         <div class="friend-card" data-aos="flip-left" data-aos-delay="700">
+          <p>👁️Future Doraemon Watches Everything</p>
+         </div>
+     </div>
+   </section>
     <section class="friends-container" id="friends-section" style="display: none;">
         <h1 class="friends-title" data-aos="fade-down">Doraemon's Friends</h1>
         <div class="friends-grid">
@@ -130,6 +239,31 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init({offset:0});
+        function hideAllSections() {
+         document.getElementById('home-section').style.display = 'none';
+         document.getElementById('about-section').style.display = 'none';
+         document.getElementById('gadgets-section').style.display = 'none';
+         document.getElementById('secrets-section').style.display = 'none';
+         document.getElementById('friends-section').style.display = 'none';
+         }
+
+        function showabout() {
+          hideAllSections();
+          document.getElementById('about-section').style.display = 'flex';
+          AOS.refresh();
+        }
+
+        function showgadgets() {
+         hideAllSections();
+         document.getElementById('gadgets-section').style.display = 'flex';
+         AOS.refresh();
+        }
+
+        function showsecrets() {
+         hideAllSections();
+         document.getElementById('secrets-section').style.display = 'flex';
+        AOS.refresh();
+        }
 
         function hamburger(){
             const navbar=document.querySelector(".dropdown")
@@ -142,14 +276,10 @@
 
         // CORRECTED Logic to switch between sections
         function showFriends() {
-            const home = document.getElementById('home-section');
-            const friends = document.getElementById('friends-section');
-            
-            home.style.display = 'none';
-            // Use flex to maintain the grid layout structure
-            friends.style.display = 'flex'; 
-            
-            AOS.refresh(); 
+         hideAllSections();
+         document.getElementById('friends-section').style.display = 'flex';
+        AOS.refresh();
+           
         }
 
         function showHome() {
@@ -161,6 +291,9 @@
             home.style.display = 'flex'; 
             
             AOS.refresh();
+        }
+        function closeWelcome() {
+           document.getElementById("welcome-overlay").style.display = "none";
         }
     </script>
 </body>
