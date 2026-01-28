@@ -120,6 +120,75 @@ header {
   padding: 15px;
   cursor: pointer;
 }
+#welcome-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+/* Cutout style card */
+.welcome-card {
+    position: relative;
+    background: #ffffff;
+    border-radius: 25px;
+    padding: 30px;
+    width: 300px;
+    text-align: center;
+    animation: popUp 0.6s ease;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+}
+
+/* Doraemon image */
+.doraemon-img {
+    width: 180px;
+    margin-top: 90px;
+}
+
+/* Close button */
+.close-btn {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Bell fun element */
+.bell {
+    width: 25px;
+    height: 25px;
+    background: gold;
+    border-radius: 50%;
+    margin: 15px auto;
+    animation: bellShake 1s infinite;
+}
+
+/* Animations */
+@keyframes popUp {
+    from {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes bellShake {
+    0% { transform: rotate(0); }
+    25% { transform: rotate(15deg); }
+    50% { transform: rotate(-15deg); }
+    75% { transform: rotate(10deg); }
+    100% { transform: rotate(0); }
+}
 
 /* ================= HOME SECTION ================= */
 .info {
@@ -173,6 +242,129 @@ header {
   width: 490px;
   height: auto;
   transition: 0.9s ease-out;
+}
+/* ================= ABOUT SECTION ================= */
+.about-container {
+  min-height: 100vh;
+  padding: 140px 9% 60px;
+  background: linear-gradient(180deg, var(--dora-light-blue) 0%, #ffffff 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-title {
+  font-size: 60px;
+  color: var(--dora-blue);
+  margin-bottom: 50px;
+  text-align: center;
+  -webkit-text-stroke: 2px var(--dora-white);
+  filter: drop-shadow(4px 4px 0 var(--dora-yellow));
+}
+
+.about-grid {
+  width: 100%;
+  max-width: 1100px;
+}
+
+.about-card {
+  background: rgba(255, 255, 255, 0.9);
+  border: 5px solid var(--dora-blue);
+  border-radius: 40px;
+  padding: 40px;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  box-shadow: 15px 15px 0 var(--dora-yellow);
+  transition: 0.35s ease;
+}
+
+.about-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 20px 20px 0 var(--dora-red);
+}
+
+.about-card img {
+  width: 300px;
+  border-radius: 25px;
+  border: 4px solid var(--dora-red);
+  background: white;
+  padding: 10px;
+}
+
+.about-card p {
+  font-size: 18px;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+/* ================= GADGETS SECTION ================= */
+.gadgets-container {
+  min-height: 100vh;
+  padding: 140px 9% 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--dora-light-blue);
+}
+
+.gadgets-container .friend-card {
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.gadgets-container .friend-card h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: var(--dora-blue);
+}
+
+.gadgets-container .friend-card:hover {
+  background: var(--dora-yellow);
+  transform: scale(1.08) rotate(-1deg);
+}
+
+/* ================= SECRETS SECTION ================= */
+.secrets-container {
+  min-height: 100vh;
+  padding: 140px 9% 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: radial-gradient(circle, #ffffff 0%, var(--dora-light-blue) 100%);
+}
+
+.secrets-container .friend-card {
+  font-size: 18px;
+  text-align: center;
+  border-style: dashed;
+  border-width: 3px;
+  cursor: help;
+  transition: 0.3s ease;
+}
+
+.secrets-container .friend-card:hover {
+  background: var(--dora-blue);
+  color: white;
+  transform: translateY(-10px) scale(1.05);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .about-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-card img {
+    width: 220px;
+  }
+
+  .about-title,
+  .friends-title {
+    font-size: 42px;
+  }
 }
 /* ================= ABOUT SECTION ================= */
 .about-container {
